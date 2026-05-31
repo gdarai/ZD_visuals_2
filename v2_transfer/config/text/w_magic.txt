@@ -1,0 +1,7 @@
+none|Bez kouzla
+lure|S kouzlem|vábení
+anger|S kouzlem|vzteku
+swap|S kouzlem|záměny
+hard|S kouzlem|tvrdosti
+steal|S kouzlem|krádeže
+

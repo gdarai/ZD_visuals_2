@@ -1,0 +1,124 @@
+[
+  {
+    "task": "SETUP",
+    "separator": "|"
+  },
+  {
+    "task": "CLEAN",
+    "target": "img_txt"
+  },
+  {
+    "task": "CLEAN",
+    "target": "out"
+  },
+  {
+    "task": "FONT",
+    "name": "Boon_Title",
+    "source": "usr/share/fonts/truetype/fonts-yrsa-rasa/Yrsa-MediumItalic.ttf",
+    "fill": "#f1c100",
+    "pointSize": 95,
+    "rowHeight": 95
+  },
+  {
+    "task": "FONT",
+    "name": "Boon_Type",
+    "source": "usr/share/fonts/truetype/fonts-yrsa-rasa/Yrsa-MediumItalic.ttf",
+    "fill": "#d39be6",
+    "pointSize": 80,
+    "rowHeight": 80
+  },
+  {
+    "task": "FONT",
+    "name": "Boon_Text",
+    "source": "usr/share/fonts/truetype/liberation/LiberationSansNarrow-Italic.ttf",
+    "fill": "#cacaca",
+    "pointSize": 50,
+    "rowHeight": 60
+  },
+  {
+    "task": "FONT",
+    "name": "Boon_ID",
+    "source": "usr/share/fonts/truetype/fonts-yrsa-rasa/Yrsa-MediumItalic.ttf",
+    "fill": "#74a5ad",
+    "pointSize": 65,
+    "rowHeight": 90
+  },
+  {
+    "task": "BUILD",
+    "name": "BoonCard",
+    "elements": [
+      {
+        "source": "boon/[2].png",
+        "position": "+95+263"
+      },
+      {
+        "source": "ico/Ico_spell_[1].png",
+        "position": "+77+80"
+      },
+      {
+        "source": "img_txt/b_tit_[0].png",
+        "position": "+281+78"
+      },
+      {
+        "source": "img_txt/b_typ_[1].png",
+        "position": "+66+808"
+      },
+      {
+        "source": "img_txt/b_txt_[1].png",
+        "position": "+66+880"
+      },
+      {
+        "source": "img_txt/b_id_[0].png",
+        "position": "+590+970"
+      },
+      {
+        "source": "card/Boon_Shadow.png",
+        "position": "+0+0"
+      }
+    ]
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/b_titles.txt",
+    "target": "img_txt/b_tit",
+    "font": "Boon_Title",
+    "size": "466x190 xc:none",
+    "gravity": "West",
+    "firstIsName": true
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/b_types.txt",
+    "target": "img_txt/b_typ",
+    "font": "Boon_Type",
+    "size": "690x80 xc:none",
+    "gravity": "Center",
+    "firstIsName": true
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/b_IDs.txt",
+    "target": "img_txt/b_id",
+    "font": "Boon_ID",
+    "size": "190x86 xc:none",
+    "gravity": "Center",
+    "firstIsName": true
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/b_texts.txt",
+    "target": "img_txt/b_txt",
+    "font": "Boon_Text",
+    "size": "690x176 xc:none",
+    "gravity": "North",
+    "firstIsName": true
+  },
+  {
+    "task": "CARDS",
+    "printLimit": -1,
+    "source": "text/b.txt",
+    "base": "card/Boon_BG.png",
+    "target": "out/b_card",
+    "build": "BoonCard"
+  }
+]

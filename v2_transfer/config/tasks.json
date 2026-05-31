@@ -1,0 +1,220 @@
+[
+  {
+    "task": "SETUP",
+    "separator": "|"
+  },
+  {
+    "task": "CLEAN",
+    "target": "img_txt"
+  },
+  {
+    "task": "CLEAN",
+    "target": "out"
+  },
+  {
+    "task": "FONT",
+    "name": "Task_Title",
+    "source": "usr/share/fonts/truetype/fonts-yrsa-rasa/Yrsa-MediumItalic.ttf",
+    "fill": "#362a19",
+    "pointSize": 95,
+    "rowHeight": 80
+  },
+  {
+    "task": "FONT",
+    "name": "Task_Type",
+    "source": "usr/share/fonts/truetype/fonts-yrsa-rasa/Yrsa-MediumItalic.ttf",
+    "fill": "#47331d",
+    "pointSize": 80,
+    "rowHeight": 80
+  },
+  {
+    "task": "FONT",
+    "name": "Task_Text",
+    "source": "usr/share/fonts/truetype/liberation/LiberationSansNarrow-Italic.ttf",
+    "fill": "#000000",
+    "pointSize": 50,
+    "rowHeight": 60
+  },
+  {
+    "task": "FONT",
+    "name": "Task_ID",
+    "source": "usr/share/fonts/truetype/fonts-yrsa-rasa/Yrsa-MediumItalic.ttf",
+    "fill": "#d1c8af",
+    "pointSize": 65,
+    "rowHeight": 90
+  },
+  {
+    "task": "BUILD",
+    "name": "Combine2",
+    "elements": [
+      {
+        "source": "ico/Ico_[0].png",
+        "position": "+0+0"
+      },
+      {
+        "source": "ico/Ico_[1].png",
+        "position": "+170+0"
+      }
+    ]
+  },
+  {
+    "task": "BUILD",
+    "name": "Combine3",
+    "elements": [
+      {
+        "source": "ico/Ico_[0].png",
+        "position": "+0+0"
+      },
+      {
+        "source": "ico/Ico_[1].png",
+        "position": "+170+0"
+      },
+      {
+        "source": "ico/Ico_[2].png",
+        "position": "+340+0"
+      }
+    ]
+  },
+  {
+    "task": "BUILD",
+    "name": "CombineW",
+    "elements": [
+      {
+        "source": "ico/Ico_s_[0].png",
+        "position": "+0+0"
+      },
+      {
+        "source": "ico/Ico_s_[1].png",
+        "position": "+0+60"
+      },
+      {
+        "source": "ico/Ico_s_[2].png",
+        "position": "+0+120"
+      }
+    ]
+  },
+  {
+    "task": "BUILD",
+    "name": "TaskCard",
+    "elements": [
+      {
+        "source": "task/[0].png",
+        "position": "+73+201"
+      },
+      {
+        "source": "img_txt/ico_[0].png",
+        "position": "+411+645",
+        "centered": true
+      },
+      {
+        "source": "img_txt/t_tit_[0].png",
+        "position": "+66+68"
+      },
+      {
+        "source": "img_txt/t_typ_[1].png",
+        "position": "+66+728"
+      },
+      {
+        "source": "img_txt/t_txt_[0].png",
+        "position": "+66+800"
+      },
+      {
+        "source": "img_txt/t_id_[0].png",
+        "position": "+610+970"
+      },
+      {
+        "source": "card/Task_Shadow.png",
+        "position": "+0+0"
+      },
+      {
+        "source": "img_txt/ico_w_[0].png",
+        "position": "+36+70"
+      },
+      {
+        "source": "ico/task_icon_[2].png",
+        "position": "+666+70"
+      }
+    ]
+  },
+  {
+    "task": "CARDS",
+    "printLimit": -1,
+    "source": "text/t_ico2.txt",
+    "base": "330x160",
+    "target": "img_txt/ico",
+    "firstIsName": true,
+    "build": "Combine2"
+  },
+  {
+    "task": "CARDS",
+    "printLimit": -1,
+    "source": "text/t_ico3.txt",
+    "base": "500x160",
+    "target": "img_txt/ico",
+    "firstIsName": true,
+    "build": "Combine3"
+  },
+  {
+    "task": "CARDS",
+    "printLimit": -1,
+    "source": "text/t_ico2.txt",
+    "base": "120x240",
+    "target": "img_txt/ico_w",
+    "firstIsName": true,
+    "build": "CombineW"
+  },
+  {
+    "task": "CARDS",
+    "printLimit": -1,
+    "source": "text/t_ico3.txt",
+    "base": "180x360",
+    "target": "img_txt/ico_w",
+    "firstIsName": true,
+    "build": "CombineW"
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/t_titles.txt",
+    "target": "img_txt/t_tit",
+    "font": "Task_Title",
+    "size": "690x155 xc:none",
+    "gravity": "Center",
+    "firstIsName": true
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/t_types.txt",
+    "target": "img_txt/t_typ",
+    "font": "Task_Type",
+    "size": "690x80 xc:none",
+    "gravity": "Center",
+    "firstIsName": true
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/t_IDs.txt",
+    "target": "img_txt/t_id",
+    "font": "Task_ID",
+    "size": "190x86 xc:none",
+    "gravity": "Center",
+    "firstIsName": true
+  },
+  {
+    "task": "TEXTS",
+    "source": "text/t_texts.txt",
+    "target": "img_txt/t_txt",
+    "font": "Task_Text",
+    "size": "690x176 xc:none",
+    "gravity": "North",
+    "firstIsName": true
+  },
+  {
+    "task": "CARDS",
+    "printLimit": -1,
+    "subset": "0:50",
+    "source": "text/t.txt",
+    "base": "card/Task_BG.png",
+    "target": "out/t_card",
+    "build": "TaskCard"
+  }
+]
